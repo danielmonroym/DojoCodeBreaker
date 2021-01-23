@@ -9,7 +9,7 @@ app.get('/setsecret/:secret', function (req, res){
   number = req.params.secret;
   cb.setSecret(number);
   
-  res.send({message: 'Ok, let the game begins'});
+  res.send({message: 'Empieza a jugar'});
 });
 
 app.get('/guess/:number', function (req, res){
@@ -17,13 +17,7 @@ app.get('/guess/:number', function (req, res){
   res.send({result: cb.codebreaker(number)});
 });
 
-app.get('/upgrade/', function (req, res){
-  res.send({message: 'Ok upgraded!!!!'});
-});
 
-app.get('/delete/', function (req, res){
-  res.send({message: 'Ok Deleted!!!!'});
-});
 
 const PORT= process.env.PORT || 5000;
 
