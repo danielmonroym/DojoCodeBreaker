@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest codebreaker.test"
+    "test": "jest codebreaker.test",
+    "start": "node app"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }

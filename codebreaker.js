@@ -1,16 +1,28 @@
-function codebreaker(a, b) {
+
+let number="";
+function codebreaker(b) {
   let result = "";
-  for (let i = 0; i < a.length; i++) {
-    result = compare(a, b, i, result);
+  console.log(number,b);
+  for (let i = 0; i < number.length; i++) {
+  
+    result = compare(number, b, i, result);
   }
   return result;
 }
-function compare(a, b, i, result) {
-  return a.charAt(i) == b.charAt(i)
+function compare(number, b, i, result) {
+  return number.charAt(i) == b.charAt(i)
     ? "x" + result.slice(0)
-    : a.includes(b.charAt(i))
+    : number.includes(b.charAt(i))
     ? result + "_"
     : result;
 }
 
-module.exports.codebreaker = codebreaker;
+function setSecret(a){
+   number=a;
+}
+
+module.exports = {
+  codebreaker,
+  setSecret
+};
+
