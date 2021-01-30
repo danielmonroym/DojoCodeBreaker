@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest codebreaker.test",
+    "test": "jest codebreaker.test --verbose",
     "start": "node app"
   },
   "author": "",
